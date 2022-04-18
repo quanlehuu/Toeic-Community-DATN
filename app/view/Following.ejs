@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+
+    <% include components/head.ejs %>
+        <link rel="stylesheet" href="/static/css/newsfeed.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/following.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+            crossorigin="anonymous">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+        <title>Toeic Community</title>
+        <style>
+            #body.row {
+                margin: 53px 0 0 0;
+            }
+        </style>
+</head>
+
+<body>
+
+    <% include components/navigation.ejs %>
+        <!-- TOP 9 -->
+        <% include components/top8.ejs %>
+            <div id="content">
+                
+
+            </div>
+            <% include components/footer.ejs %>
+            <script src="/static/js/following.js"></script>
+</body>
+
+</html>

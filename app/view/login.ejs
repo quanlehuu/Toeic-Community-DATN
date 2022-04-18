@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toeic Community</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css">  
+
+	<!-- Latest compiled and minified JavaScript -->
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Coiny|Pacifico|Suez+One|Ultra" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="static/img/logo.png">
+		<span class="toeic-community">Toeic Community</span>
+	</header>
+	<div class="container">    
+		<div class="backdrop">
+			<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+		</div>                     
+    	<div class="panel login-container">
+			<div class="login-title">Login</div>
+			<div id="loginalert" style="display:none" class="alert alert-danger">
+				<p></p>
+			</div>   
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    			<input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Username">
+    		</div>
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    			<input id="login-password" type="password" class="form-control" name="password" value="" placeholder="Password">
+    		</div>
+    		<div class="remember-forget">
+    			<a class="forget-pass" href="#"><i>Forget Password?</i></a>
+    			<div style="clear: right;"></div>
+    		</div>
+    		<button type="button" class="btn btn-block btn-login" id="login">Login</button>
+    		<div class="signup">Don't have an Account? <a href="/signup"><i>Sign up here</i></a>
+    		</div>
+    		
+    		<button type="button" class="btn btn-login btn-signup" id="signup">Sign up</button>
+    	</div>
+
+    
+	</div>
+	<script src="/static/lib/jquery/jquery.min.js"></script>
+    <!-- <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="/static/js/Login.js"></script>
+</body>
+
+</html>

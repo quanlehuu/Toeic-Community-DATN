@@ -1,0 +1,37 @@
+{
+  "name": "group10-toeiccommunity",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.0.11",
+    "nodemon": "^1.17.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/thuanle/ttcnpm-172-10.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/thuanle/ttcnpm-172-10/issues"
+  },
+  "homepage": "https://gitlab.com/thuanle/ttcnpm-172-10#README"
+}

@@ -1,0 +1,16 @@
+  NÊN DÙNG SUBLIME TEXT HOẶC VISUAL STUDIO CODE
+
+Cách cài đặt và sử dụng: 
+1. Tại thư mục có chứa doc này, gõ cmd vào thanh địa chỉ url của window explorer hoặc nháy phải x here
+2. Gõ và enter : npm init
+3. Gõ và enter : npm install 
+////////////////////////////3 BƯỚC TRÊN CHỈ DÀNH CHO KHỞI TẠO LẦN ĐẦU ////////////////////////
+3.1 : Sau đó cứ ai thêm package gì mới thì báo cho mọi người để thực hiện bước 3 lại. Hoặc thấy ai đó báo mới thêm package thì sau lần pull mới phải thực hiện lại bước 3.
+
+4. Khởi chạy server bằng cách gõ và enter: node server.js
+5. Vào thư mục app/view rồi tìm file ứng với tên mỗi người, mở ra và code. (File .ejs ấy, nhớ chọn format cho file là HTML để dễ code ) 
+6. Ứng với mỗi người, tự tạo một file css ở thư mục public/css, bỏ ảnh ở mục public/img , dẫn link là /static/css/abc.css hay /static/img/abc.png ,vân vân và mây mây
+( Có mẫu một cái link css được comment trong file từng người )
+7. Mở trình duyệt vào địa chỉ : localhost:3000/ten-moi-nguoi . Ví dụ : localhost:3000/tung 
+8. Thắc mắc hay gặp khó khăn gì liên hệ Quân
+ 

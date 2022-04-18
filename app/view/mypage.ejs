@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toeic Community</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css">  
+	<% include components/head.ejs %>
+	<!-- Latest compiled and minified JavaScript -->
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Coiny|Pacifico|Suez+One|Ultra" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/mypage.css">
+	<link rel="stylesheet" href="static/css/newsfeed.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+</head>
+<body>
+	<!-- NAV ON TOP - HEADER -->
+    <% include components/navigation.ejs %>
+	<!-- TOP 9 -->
+    <% include components/top8.ejs %>
+	<header>
+		<img class="logo" src="static/img/logo.png">
+		<span class="toeic-community">Toeic Community</span>
+	</header>
+	
+	<div class="content">
+		<div class="avatar">
+			<img class="pic" src="">
+			<input type="file" id="changeAvatar"/>
+			<div class="change-avatar">
+				<i class="fas fa-camera"></i>Update Image
+			</div>
+		</div>
+		<div class="name-score">
+			<span class="name"></span>
+			<i class="fa fa-heart heart fa-lg"></i>
+			<span class="score"></span>
+		</div>
+		<div id="follow">
+		</div>
+		<div class="info-container">
+			<h2 class="title">
+				Personal Information
+			</h2>
+		
+			<div class="info">
+				<span >Username</span>
+				<span id="username"></span>
+			</div>
+			<div class="info">
+				<span>Full name</span>
+				<span id="fullname">
+				</span>
+			</div>
+			<div class="info">
+				<span>Birthday</span>
+				<span id="birthday">
+				</span> 
+			</div>
+			<div class="info">
+				<span>Phone number</span>
+				<span id="phonenumber">
+				</span>
+			</div>
+			<div class="info">
+				<span>Email Address</span>
+				<span id="email">
+				</span>
+			</div>
+			<div></div>
+
+			<h2 class="title">
+				Posts
+			</h2>
+			<% include components/posts.ejs %>
+			<p class="no-post" style="padding: 0;">Don't have any posts!</p>
+		</div>
+		
+		<a id="useridentification" style="display: none;"><%=name %></a>
+	</div>
+	<% include components/footer.ejs %>
+	<script src="/static/js/showPost.js"></script>
+	<script src="/static/js/profile.js"></script>
+
+	<script>
+		$('.change-avatar').on('click',()=>{
+			$('#changeAvatar').trigger('click');
+		});
+	</script>
+
+</body>
+</html>

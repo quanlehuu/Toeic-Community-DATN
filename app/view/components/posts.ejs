@@ -1,0 +1,156 @@
+<div class="backdrop">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div id="posts">
+    <div id="postid">
+        <div class="post">
+            <!-- User posts, time -->
+            <img class="avt" src="" alt="Avatar">
+            <div class="user-post">
+                <b>
+                    <a>Lê Hữu Quân</a>
+                </b>
+                <i>14:05 02/04/2022</i>
+            </div>
+            <div style="clear: left;"></div>
+
+            <!-- Post content -->
+            <div class="content-post">
+                <span class="question">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor daf fi incididunt ut labore et dolore magna
+                    aliqua.
+                </span>
+
+                <div class="options">
+                    <span class="option optionA">A. even</span>
+                    <span class="option optionB">B. once</span>
+                    <span class="option optionC">C. early</span>
+                    <span class="option optionD">D. always</span>
+                </div>
+
+                <p class="tag"><b>Tag: </b></p>
+
+                <button class="show-solution">Show Solution</button>
+                <div class="solution">
+                    <p>Choice
+                        <b></b>
+                    </p>
+                    <p>Explanation:
+                        <i></i>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vote up, vote down, comment, save  -->
+            <div class="row vote-cmt-save">
+                <div class="col-xs-3 vote-up-down vote-up">
+                    <i class="fa fa-caret-up"></i>
+                    <p>Vote up</p>
+                </div>
+                <div class="col-xs-3 vote-up-down vote-down">
+                    <i class="fa fa-caret-down"></i>
+                    <p>Vote down</p>
+                </div>
+                <div class="col-xs-3 cmt" data-toggle="modal">
+                    <i class="fa fa-comments comment-save"></i>
+                    <p>Comment</p>
+                </div>
+                <div class="col-xs-3 save">
+                    <i class="fa fa-bookmark comment-save"></i>
+                    <p>Save</p>
+                </div>
+            </div>
+
+
+            <!-- Typing comment -->
+            <div class="typing-comment">
+                <img src="/static/img/avatar.jpg" alt="Avatar">
+                <input type="text" value="" name="comment" placeholder="Write a comment" />
+                <button class="enter-comment">Enter</button>
+            </div>
+
+            <!-- Comment -->
+            <div class="comment">
+                <img src="/static/img/avatar.jpg" alt="Avatar">
+                <div class="user-cmt">
+                    <b>
+                        <a>name</a>
+                    </b>
+                    <i>time</i>
+                    <span>comment</span>
+                </div>
+                <div style="clear: left;"></div>
+            </div>
+
+            <!-- More ... -->
+            <div class="dropdown more">
+                <i class="fas fa-ellipsis-h dropdown-toggle" class="option" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="option">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#" class="delete">Delete</a>
+                    </li>
+                    <!-- <li role="presentation" class="divider"></li>                                     -->
+                    <!-- <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Get Notifications</a>
+                    </li> -->
+                </ul>
+            </div>
+
+
+            <!-- Popup comment-->
+            <div class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                            <h4 class="modal-title">Comment</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span class="lds-ring"><div></div><div></div><div></div><div></div></span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post loader">
+    <div class="box-image"></div>
+    <div class="box-name"></div>
+    <div class="box-time"></div>
+    <div class="content-post">
+        <div class="box-question1"></div>
+        <div class="box-question2"></div>
+        <div class="opts">
+            <div class="box-option"></div>
+            <div class="box-option"></div>
+            <div class="box-option"></div>
+            <div class="box-option"></div>
+        </div>
+        <div class="box-tag"></div>
+        <div class="box-solution"></div>
+    </div>
+</div>
+
+<div id="commentId">
+    <div class="aComment">
+        <div class="vote-comment">
+            <i class="fa fa-caret-up vote-cmt-up"></i>
+            <i class="fa fa-caret-down vote-cmt-down"></i>
+        </div>
+        <img src="" alt="Avatar">
+        <div class="user-cmt">
+            <b>
+                <a>name</a>
+            </b>
+            <i>time</i>
+            <span>comment</span>
+        </div>
+        <div style="clear: left;"></div>
+    </div>
+</div>

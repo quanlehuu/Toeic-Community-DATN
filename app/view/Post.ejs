@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+
+    <% include components/head.ejs %>
+	
+    <!-- <link rel="stylesheet" href="/static/css/newsfeed.css"> -->
+    <link rel="stylesheet" href="/static/css/postStyle.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>Toeic Community</title>
+    <style>
+        #body.row{
+            margin:53px 0 0 0;
+        }
+        
+        </style>
+</head>
+<body >
+    <!-- TOP NAVIGATION -->
+    <% include components/navigation.ejs %>
+    <!-- TOP 10 -->
+    <% include components/top8.ejs %>
+    <!-- BODY ( NAV ON LEFT , CONTENT AND TOP 10-->
+    
+    <div id="body" style="background-image: url('/static/img/background.gif')">
+        
+        <!-- CONTENT -->
+        <div id="content">
+            <div class="backdrop">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+
+            <div id="posts" class="col-sm-12 col-md-12 posts" >
+                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                        <p></p>
+                    </div>
+                <div id="postform" class="form-horizontal">
+                    <!-- choices -->
+                    <div class="form-group  choices">
+                        <label for="username" class="col-md-2">You post to</label>
+                        <div class="col-md-8 form-inline">
+                            <div class="form-check ">
+                                <input class="form-check-input" name="group100" type="radio" id="radio100" checked>
+                                <label class="form-check-label" for="radio100">share knowledge</label>
+                            </div>
+                            
+                            <div class="form-check" style="margin-left:20px;">
+                                <input class="form-check-input" name="group100" type="radio" id="radio101">
+                                <label class="form-check-label" for="radio101">ask for help</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Begin Question -->
+                    <div class="form-group" style="text-align:left;" id="Question">
+                        <label for="Question" class="col-md-2">Question</label>
+                        <div class="col-md-8">
+                            <textarea  name="Question" class="form-control" rows="5"></textarea>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:15px"></span>
+                        </div>
+                    </div>
+                    <!-- End Question -->
+                    
+                    <!-- Begin answers section-->
+                    <div class="form-group answer">
+                        <div class="col-md-2">
+                            <label for="answer">Answer</label>
+                        </div>
+                        <!-- 4 answers -->
+                        <div class="form-group" id="A">
+                            <label for="A" class="col-md-2 control-label">A</label>
+                            <div class="col-md-8 answerABCD">
+                                <input type="text" class="form-control" name="A" >
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:25px"></span>                                                  
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="B">
+                            <label for="B" class="col-md-2 control-label">B</label>
+                            <div class="col-md-8 answerABCD">
+                                <input type="text" class="form-control" name="B" >                            
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:25px"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="C">
+                            <label for="C" class="col-md-2 control-label">C</label>
+                            <div class="col-md-8 answerABCD">
+                                <input type="text" class="form-control" name="C" >                            
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:25px"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="D">
+                            <label for="D" class="col-md-2 control-label">D</label>
+                            <div class="col-md-8 answerABCD">
+                                <input type="text" class="form-control" name="D" >                            
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:25px"></span>
+                            </div>
+                        </div>
+                        <!-- end 4 answers -->
+                    </div>
+                    <!-- End answers section-->
+
+                    <!-- Begin solution section -->
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <label for="solution" style="padding-top:6px;">Solution</label>
+                        </div>
+                        <!-- dropdown bar -->
+                        <div class="col-md-8 dropdown">
+                            <select name="solution" id="solution" class="btn btn-default">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- End solution section -->
+
+                    <!-- Begin explanation section -->
+                    <div class="form-group" id="Explanation">
+                        <label for="explanation" class="col-md-2">Explanation</label>
+                        <div class="col-md-8" >
+                            <textarea  class="form-control" rows="5" name="Explanation" ></textarea>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:15px"></span>
+                        </div>
+                    </div>
+                    <!-- End explanation section -->
+
+                    <!-- Begin tag section -->
+                    <div class="form-group" id="Tag">
+                        <label for="Tag" class="col-md-2" style="margin-top: 5px;" >Tag</label>
+                        <div class="col-md-8">
+                            <input type="text" name = "Tag" value="" data-role="tagsinput"/>                          
+                            <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;margin-right:15px"></span>
+                        </div>
+                    </div>
+                    <!-- End tag section -->
+
+                    <!-- Post btn -->
+                    <div class="col-md-10">
+                        <input id="submit" type="submit"  class="btn btn-primary" style="float:right; margin-right:-10px;" value="Post">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <% include components/footer.ejs %>
+    
+    <script src="/static/js/post.js"></script>
+    <script src="/static/js/Tagsinput.js"></script>
+</body>
+</html>
+

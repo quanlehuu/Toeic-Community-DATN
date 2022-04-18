@@ -1,0 +1,49 @@
+
+.banner-right {
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	top: 55px;
+	right: 0;
+	width: 250px;
+	max-width: 18%;
+	background: #f8f8f8;
+	text-align: center;
+
+}
+.list-user {
+	display: table;
+	margin: auto;
+}
+.list-user .top-element {
+	display: table-row;
+	border-bottom: 1px solid red;
+
+}
+.top-element > div {
+	display: table-cell;
+	padding: 0 10px 10px 0;
+	
+}
+.top-element > div > img {
+	height: 30px;
+	width: 30px;
+}
+.top-element > div > h5, .top-element > div > h6 {
+	margin-top: 0 !important;
+}
+div .order {
+	text-align: center;
+}
+.top-element a:hover , a:active, a:focus{
+	text-decoration: none;
+
+}
+.top-element i {
+	color: red;
+}
+@media (max-width: 991px) {
+	.banner-right {
+		display: none;
+	}
+}

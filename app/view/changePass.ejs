@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toeic Community</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css">  
+	<% include components/head.ejs %>
+	<!-- Latest compiled and minified JavaScript -->
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Coiny|Pacifico|Suez+One|Ultra" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/mypage.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/changePassWord.css">
+	<style>
+        #body.row{
+            margin:53px 0 0 0;
+        }
+        
+        </style>
+</head>
+<body>
+	<% include components/navigation.ejs %>
+	<% include components/top8.ejs %>
+
+	
+	<div class="content">
+		<div class="top">
+			<div id="loginalert" style="display:none" class="alert alert-danger">
+				<p></p>
+			</div>   
+			<div class="row span">
+					<label for="curPass" class="col-md-3 control-label">Current password</label>
+					<input type="password" class="col-md-8" value="" id="oldPass" name="oldPass">
+				</div>
+				<div class="row span">
+					<label for="curPass" class="col-md-3 control-label">New password</label>
+					<input type="password" class="col-md-8" value="" id="newPass" name="newPass">
+				</div>
+				<div class="row span">
+					<label for="curPass" class="col-md-3 control-label">Retype new password</label>
+					<input type="password" class="col-md-8" value="" id="reNewPass" name="reNewPass">
+				</div>
+			<input type="button" value="Save" class="btn btn-primary button" id="change">			
+		</div>
+
+	</div>
+
+
+	<% include components/footer.ejs %>    
+	<script src="/static/js/changePass.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!-- TOP NAV -->
+<nav class="top-nav">
+    <div class="menu-logo">
+        <div class="toggle-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="/" class="logo-name">
+            <div class="logo"></div>
+            <div class="name"> Toeic Community</div>
+        </a>
+    </div>
+    <div class="search">
+        <div class="search-box">
+            <input type="text" name="keyword" placeholder="Type tag and enter..." class="form-control">
+        </div>
+        <div id="search">
+            <i class="fas fa-search"></i>
+        </div>
+
+    </div>
+    <div class="notification">
+        <i class="fas fa-bell"></i>
+        <span> 5</span>
+        <div class="notification-view style">
+            <div class="notis">
+                <a>Mark all as read<i class="fa fa-check-circle" style="margin-left: 10px;"></i></a>
+
+            </div>
+            
+
+            <div id="notiId">
+                <a href="#" >
+                    <img src="/static/img/avatar_default.png" />
+                    <div class="notification-detail">
+                        <span>content</span>
+                        <i>time</i>
+                    </div>
+                    <div style="clear:left;"></div>
+                </a> 
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <div class="loading"><div></div><div></div><div></div><div></div></div>
+
+            
+            
+        </div>
+    </div>
+</nav>
+
+
+<!-- LEFT NAV -->
+<div id="vertical-menu">
+    <a class="row">
+        <div class="col-sm-3 avt" style="text-align:center;">
+            <img class="mypic" src="" alt="Avatar">
+        </div>
+        <div class="col-sm-9" style="padding-top:9px; text-align:center;">
+            <p id="name"></p>
+            <p id="point">
+            </p>
+        </div>
+    </a>
+    <a href="/" id="sb-newsfeed">
+        <p>
+            <i class="fa fa-newspaper" /></i>News Feed</p>
+    </a>
+    <a id="sb-mypage">
+        <p>
+            <i class="fa fa-home"></i>My Page</p>
+    </a>
+    <a href="/post" id="sb-post">
+        <p>
+            <i class="fa fa-edit"></i>Post</p>
+    </a>
+    <a href="/saved" id="sb-saved">
+        <p>
+            <i class="fa fa-bookmark"></i>Saved</p>
+    </a>
+    <a href="/following" id="sb-following">
+        <p>
+            <i class="fa fa-user"></i>Following</p>
+    </a>
+    <a href="/changepassword" id="sb-changepass">
+        <p>
+            <i class="fa fa-lock"></i>Change Password</p>
+    </a>
+    <a href="/video" id="sb-changepass">
+        <p>
+            <i class="fa fa-video"></i>Video học tiếng anh</p>
+    </a>
+    <a id="sb-logout">
+        <p>
+            <i class="fa fa-sign-out-alt"></i>LogOut</p>
+    </a>
+    <p class="popular-tag" style="border-top: 1px solid;">
+<!--         
+        <a>Hello</a>
+        <a>Quân Lê Hữu</a>
+        <a>Nát cmnr</a>
+        <a>Hello</a>
+        <a>Hello</a>
+        <a>Hello</a>
+        <a>Hello</a>
+        <a>Hello</a>
+        <a>Hello</a>
+        <a>Hello</a> -->
+    </p>
+</div>
+<script>
+    document.getElementById("sb-mypage").setAttribute("href", "/user=" + localStorage.getItem("username"));
+</script>

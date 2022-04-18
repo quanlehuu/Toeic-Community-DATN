@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="static/css/signup.css">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Coiny|Pacifico|Suez+One|Ultra" rel="stylesheet">
+    
+    <title>Sign up</title>
+</head>
+<body>
+    <header class="fix">
+        <img class="logo" src="static/img/logo.png">
+        <span class="toeic-community">Toeic Community</span>
+    </header>
+    <div class="container">
+        <div class="backdrop">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div id="signupbox" style="margin-top:60px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <!-- <div class="panel-heading">
+                    
+                </div> -->
+                <div class="panel-body" >
+                    <div class="login-title">Sign Up</div>
+
+                    <!-- FORM -->
+                    <div id="signupform" class="form-horizontal"">
+
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p></p>
+                        </div>
+
+
+                        <div class="form-group has-feedback" id="username">
+                            <label for="username" class="col-md-4">Username *</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                        
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group has-feedback" id="password">
+                            <label for="password" class="col-md-4">Password *</label>
+                            <div class="col-md-8">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                        
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback" id="repassword">
+                            <label for="repassword" class="col-md-4">Retype password *</label>
+                            <div class="col-md-8">
+                                <input type="password" class="form-control" name="repassword" placeholder="Confirm Password">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                        
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback" id="name">
+                            <label for="fullname" class="col-md-4">Full Name *</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="name" placeholder="Your full name">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                                                   
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback" id="birthday">
+                            <label for="birthday" class="col-md-4">Birthday</label>
+                            <div class="col-md-8">
+                                <input type="date" class="form-control" name="birthday" placeholder="Birthday" min="1900-01-01">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                                                   
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback" id="email">
+                            <label for="email" class="col-md-4">Email *</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                        
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback" id="phonenumber">
+                            <label for="phonenumber" class="col-md-4">Phone Number</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="phonenumber" placeholder="Phone Number">
+                                <span class="glyphicon glyphicon-remove form-control-feedback" style="display: none;"></span>
+                                <span class="glyphicon glyphicon-ok form-control-feedback" style="display: none;"></span>                        
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-4 checkbox" style="margin-bottom: 10px;">
+                                <label><input type="checkbox"> Do you agree the rules below? Take a look!</label>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-2 col-md-offset-4">
+                                <input id="btn-signup" type="submit" class="btn btn-info" value="Sign Up" />
+                            </div>
+                            <div class="col-md-6" style="line-height:34px;"> <a href="/login">Already had an account?Log in now!</a> </div>
+                        </div>
+
+                    </div>
+                 </div>
+            </div>
+
+         </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <p class="panel-heading rule" style="background-color:#b4b4b4;"><strong> Nội quy & Hướng dẫn sử dụng (Rules and manual - Vietnamese)</strong></p>
+            <div class="panel-body text">
+                <p> I.  Quy định về tài khoản:</p>
+                <div class="text1">
+                 <p>1.  Username phải dùng 6 kí tự trở lên và không chứa kí tự đặc biệt. </p>
+                 <p>2.  Password phải dùng 6 kí tự trở lên kết hợp với chữ số và biểu tượng.</p>
+                 <p>3.  Phải ghi rõ đầy đủ họ và tên.</p>
+                 <p>4.  Không được sử dụng avatar là các hình ảnh có nội dung không lành mạnh,ghê rợn,bạo lực,sexy,vi phạm thuần phong mỹ tục của Việt Nam.</p>
+                </div>
+                <p> II. Quy định về nội dung được đăng tải:</p>
+                 <div class="text1">
+                <p> 1.  Đối với những bài viết bằng tiếng Việt nên sử dụng tiếng Việt có dấu.</p>
+                <p> 2.  Đối với những bài viết bằng tiếng nước ngoài, thành viên phải tự chịu trách nhiệm toàn bộ về nội dung bài viết.</p>
+                <p> 3.  Không sử dụng ngôn từ thiếu văn hóa, khiêu dâm, đe dọa, lăng nhục các thành viên khác cũng như làm ảnh hưởng đến uy tín chung của cộng đồng, gây mất đoàn kết trong diễn đàn. </p>
+                <p> 4.  Không được đưa các hình ảnh bạo lực, đồi trụy, ghê rợn, có tính chất không lành mạnh, không phù hợp với truyền thống văn hóa Việt Nam.</p>
+                </div>
+                <p> III. Quy định về hành vi ứng xử của các thành viên</p>
+                 <div class="text1">
+                <p> 1.  Không đề xướng và tham gia bàn luận các vấn đề liên quan đến những nội dung được đề cập trong mục (II.4).</p>
+                <p> 2.  Có thái độ đúng mực, tôn trọng lẫn nhau trong quá trình trao đổi và tranh luận.</p>
+                </div>
+                <p> IV. Hướng dẫn sử dụng:</p>
+                 <div class="text1">
+                <p> 1.  Đây là trang web ôn luyện TOEIC trực tuyến,để tham gia các bạn cần phải có một tài khoản.Các bạn đăng kí tài khoản theo quy định đã được nêu rõ ở mục (I). </p>
+                <p> 2.  Sau khi đăng kí các bạn cần phải đăng nhập vào web thông qua trang Log In. </p>
+                <p> 3.  Sau khi đăng nhập sẽ chuyển qua trang Newsfeed,tại đây sẽ hiện tất cả bài đăng của mọi người.Tại đây các bạn có thể tham gia tranh luận về các câu hỏi trong bài đăng và có thể lưu lại nếu thấy bổ ích.Các bạn cũng có thể theo dõi bất kì một ai mà các bạn muốn. </p>
+                <p> 4.  Để đăng bài các bạn vào mục Post ở thanh Menu bên trái màn hình,sau đó điền đầy đủ thông tin liên quan tới bài đăng theo mẫu có sẵn và ấn đăng bài. Nhớ tuân theo quy định đã nêu ở mục (II) .</p>
+                <p> 5.  Để thay đổi các thông tin cá nhân như: Tên đầy đủ, hình đại diện, ... các bạn có thể vào trang cá nhân để đổi. </p>
+                <p> 6.  Nếu các bạn muốn đổi mật khẩu có thể vào mục Change Password ở thanh Menu bên trái màn hình, sau đó điền theo mẫu có sẵn và ấn hoàn tất. </p>
+                <p> 7.  Để xem lại các bài đã lưu các bạn vào mục Saved ở thanh Menu bên trái màn hình. </p>
+                <p> 8.  Để xem trang của những người mình đã theo dõi các bạn vào mục Following </p>
+                </div>
+            </div> 
+        </div> 
+    </div>
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/Signup.js"></script>
+        
+
+    
+    <!-- <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            var $filter = $('header');
+            var $filterSpacer = $('<div />', {
+                "height": $filter.outerHeight()
+            });
+            if ($filter.size())
+            {
+                $(window).scroll(function ()
+                {
+                    if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+                    {
+                        $filter.before($filterSpacer);
+                        $filter.addClass("fix");
+                    }
+                    else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                    {
+                        $filter.removeClass("fix");
+                        $filterSpacer.remove();
+                    }
+                });
+            }
+        });
+    </script> -->
+</body>
+</html>

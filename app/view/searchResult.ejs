@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+
+    <% include components/head.ejs %>
+        <link rel="stylesheet" href="/static/css/newsfeed.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+        <title>Toeic Community</title>
+        <style>
+            #body.row {
+                margin: 53px 0 0 0;
+            }
+        </style>
+</head>
+
+<body>
+    <div id='body' style="visibility: hidden;">
+        <!-- NAV ON TOP - HEADER -->
+        <% include components/navigation.ejs %>
+
+            <!-- BODY ( NAV ON LEFT , CONTENT AND TOP 10-->
+            <div style="position: relative;background-image: url('/static/img/background.gif')">
+
+                <!-- Content -->
+                <div id="content">
+                    <% include components/posts.ejs %>
+                    <p class="no-post">Don't have any posts having this tag!</p>
+                </div>
+
+            <!-- TOP 9 -->
+            <% include components/top8.ejs %>
+    </div>
+
+        
+        <% include components/footer.ejs %>
+        <script src="/static/js/showPost.js"></script>
+        <script src="/static/js/searchResult.js"></script>
+</body>
+
+</html>
