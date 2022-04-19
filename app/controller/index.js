@@ -35,6 +35,15 @@ router.get("/changepassword", function (req, res) {
 router.get("/video", function (req, res) {
   res.render("video");
 });
+router.get("/exam-active", function (req, res) {
+  res.render("active");
+});
+router.get("/exam-corporate", function (req, res) {
+  res.render("corporate");
+});
+router.get("/exam", function (req, res) {
+  res.render("exam");
+});
 router.get("/error", function (req, res) {
   res.status(404).render("pageNotFound", { title: "Sorry, page not found" });
 });
