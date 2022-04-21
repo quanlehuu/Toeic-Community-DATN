@@ -1,0 +1,294 @@
+
+
+
+.top-nav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: darkturquoise;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    align-items: center;
+}
+.top-nav .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 15px;
+    align-items: center;
+    margin-left: 10px;
+}
+.menu-logo .toggle-menu {
+   font-size: 25px;
+}
+
+.menu-logo .logo-name {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+}
+.logo-name .name {
+    margin-left: 10px;
+    color: black;
+}
+.menu-logo a:hover {
+    text-decoration: none;
+}
+.menu-logo .logo {
+    background: url("/static/img/logo.png") no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+
+}
+.top-nav .search {
+    position: relative;
+}
+.search .search-box {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 50%;
+    z-index: 1100;
+    width: 300px;
+}
+.search-box input {
+    border-radius: 20px;
+    height: 35px;
+}
+.active {
+    display: block!important;
+}
+.top-nav .notification {
+    margin-right: 10px;
+    position: relative;
+}
+.notification .notification-view {
+    position: absolute;
+    z-index: 1100;
+    top: 45px;
+    right: 0;
+    width: 350px;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: none;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px #eee;
+    color: gainsboro;
+}
+.notification>span {
+    text-align:  center;
+    height: 20px;
+    width: 20px;
+    background: aqua;
+    color: red;
+    position: absolute;
+    z-index: 1100;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    font-size: 13px;
+    display: none;
+}
+
+.notification-detail
+{
+    font-size: 16px;
+    padding-left: 60px;
+}
+.notification-view .notis img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 10px;
+}
+.notification-view a:hover {
+    text-decoration: none;
+}
+.not-read {
+    background: lemonchiffon!important;
+    color: gray;
+}
+
+.notification .style::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.notification .style::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.notification .style::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+
+.notification>i {
+    cursor: pointer;
+}
+
+.notification>i:hover {
+    color: rgb(1, 250, 1);
+}
+
+
+#notiId {
+    display: none;
+}
+
+.notification .notis {
+    position: relative;
+    padding-top: 40px;
+}
+
+.notification .notis>a {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.notification .notis>a:hover {
+    text-decoration: underline;
+}
+
+.notification .notis>div {
+    position: relative;
+    padding-right: 30px;
+}
+
+.notis>div>i {
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.notification-detail>i {
+    font-size: 12px;
+}
+
+.notification-detail>span {
+    display: block;
+}
+
+.notification-view a {
+    display: block;
+    color: #666;
+}
+
+@media (max-width: 400px) {
+    .top-nav .menu-logo {
+        width: 70%;
+    }
+    .logo-name {
+        justify-content: center;
+    }
+    .logo-name .name {
+        display: none;
+    }
+    .search {
+        margin-right: 10px;
+    }
+}
+@media (min-width: 500px) {
+    .top-nav .menu-logo {
+        width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .top-nav .menu-logo {
+        width: 55%;
+    }
+    .logo-name {
+        margin-left: 50px;
+    }
+}
+@media (min-width: 992px) {
+    .search .search-box {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0px;
+        margin-right: 10px;
+    }
+    .top-nav .menu-logo {
+        width: 30%;
+    }
+    .top-nav .search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 30%;
+        margin-right: 200px;
+    }
+    .top-nav .notification {
+        margin-right: 100px;
+    }
+    .menu-logo .toggle-menu {
+        display: none;
+    }
+}
+
+
+
+.notification .loading {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: none;
+    margin: 0 auto;
+  }
+  .notification .loading div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+    border: 3px solid #6fcce6db;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #6fcce6db transparent transparent transparent;
+  }
+  .notification .loading div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .notification .loading div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .notification .loading div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,48 @@
+.form-horizontal .control-label {
+	text-align: left;
+
+}
+.signup-title {
+	text-align: center;;
+	font-size: 40px;
+	font-family: 'Suez One', serif;
+	/* margin: 30px; */
+	color: #333;
+}
+
+.fix{
+	left: 0;
+	max-width: 100%;
+	overflow: visible;
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+.rule{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Sonsie One',serif;
+
+}
+.text{
+	font-family: 'Time New Roman';
+	text-align: left;
+	font-size: 20px;
+	background: url("/static/img/background.gif") ;
+}
+
+.text1{
+	text-indent: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+	.form-horizontal .control-label {
+        padding-left: 25px;
+    }
+}
+@media only screen and (max-width : 768px) {
+	.panel {
+		width: 100%!important;
+	}
+}

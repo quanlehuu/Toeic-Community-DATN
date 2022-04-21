@@ -1,0 +1,48 @@
+
+.vertical-menu {
+    width: 300px;
+}
+
+
+/* .vertical-menu a {
+
+    color: black;
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+   
+}
+
+.vertical-menu a:hover {
+    width: 260px;
+    background-color: #000000;
+    color:white;
+
+} */
+
+
+/* .container {
+
+  margin-top: 50px;
+  width: 260px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: left;
+} */
+
+#avt {
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+
+#name {
+  padding-left: 0;
+  padding-right: 0;
+ 
+}
+#name1{
+}
+#name2{
+
+}

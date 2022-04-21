@@ -1,0 +1,59 @@
+#content {
+	/* text-align: center; */
+}
+
+#content>div {
+	display: inline-block;
+	width: 49%;
+	margin-bottom: 15px;
+}
+.person {
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+	display: flex;
+	/* display: inline-block; */
+    align-items: center;
+    background: white;
+    text-align: center;
+}
+.person .pic {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+}
+.pic img {
+	width: 100%;
+	height: auto;
+	min-height: 30px;
+}
+.person .info {
+	display: flex;
+	flex-direction: column;
+}
+.info span .fa-heart {
+	color: red;
+
+}
+@media (max-width: 350px) {
+	#content>div {
+		width: 90%;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+	#content>div {
+		display: inline-block;
+		width: 33%;
+		margin: 20px 0;
+	}
+}
+@media (min-width: 993px) {
+	#content {
+		padding: 0 20px;
+	}
+}
+@media (min-width: 1266px) {
+	#content>div {
+		width: 33%;
+	}
+}

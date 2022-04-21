@@ -1,0 +1,10 @@
+html.remove-transition * {
+  transition: none!important;
+}
+body {
+  background-image: url("/static/img/background.gif");
+}
+
+#app {
+  transition: opacity 1s ease;
+}
