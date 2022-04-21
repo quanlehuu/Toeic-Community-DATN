@@ -2,6 +2,7 @@ const express = require("express");
 const config = require("config");
 const bodyParser = require("body-parser");
 const { mongoose } = require("./app/common/database.js");
+var cors = require("cors");
 
 const userRoute = require("./app/controller/user");
 const postRoute = require("./app/controller/post");
@@ -19,6 +20,8 @@ const getPopularTagRoute = require("./app/controller/getTag");
 const verify = require("./app/helper/verify");
 
 const app = express();
+
+app.use(cors());
 
 // body parser
 app.use(bodyParser.json());

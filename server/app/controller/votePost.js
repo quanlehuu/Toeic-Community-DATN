@@ -2,6 +2,7 @@ const express = require("express");
 const VotePost = require("../model/VotePost");
 const Post = require("../model/post");
 const mongoose = require("mongoose");
+const User = require("../model/user");
 const ObjectId = mongoose.Types.ObjectId;
 
 const controller = express.Router();
