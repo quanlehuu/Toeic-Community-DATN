@@ -64,27 +64,28 @@ $(document).ready(function () {
       $("#username").addClass("has-error");
       $("#username .glyphicon-remove").show();
     } else if (!$("#username").hasClass("has-error")) {
-      $.get("http://localhost:3000/api/user/checkUsername/" + username).then(
-        function (data, status) {
-          if (data && data.count) {
-            if (data.count !== "0") {
-              $("[name='username']").attr(
-                "data-content",
-                "Username already exists. Try another."
-              );
-              $("#username").addClass("has-error");
-              $("#username .glyphicon-remove").show();
-              $("#username").removeClass("has-success");
-              $("#username .glyphicon-ok").hide();
-            } else {
-              $("#username").removeClass("has-error");
-              $("#username .glyphicon-remove").hide();
-              $("#username").addClass("has-success");
-              $("#username .glyphicon-ok").show();
-            }
+      $.get(window.HOST + "/api/user/checkUsername/" + username).then(function (
+        data,
+        status
+      ) {
+        if (data && data.count) {
+          if (data.count !== "0") {
+            $("[name='username']").attr(
+              "data-content",
+              "Username already exists. Try another."
+            );
+            $("#username").addClass("has-error");
+            $("#username .glyphicon-remove").show();
+            $("#username").removeClass("has-success");
+            $("#username .glyphicon-ok").hide();
+          } else {
+            $("#username").removeClass("has-error");
+            $("#username .glyphicon-remove").hide();
+            $("#username").addClass("has-success");
+            $("#username .glyphicon-ok").show();
           }
         }
-      );
+      });
     }
   });
 
@@ -243,7 +244,7 @@ $(document).ready(function () {
       $("#email").removeClass("has-success");
       $("#email .glyphicon-ok").hide();
     } else {
-      $.get("http://localhost:3000/api/user/checkEmail/" + email).then(
+      $.get(window.HOST + "/api/user/checkEmail/" + email).then(
         (data, status) => {
           if (data && data.count) {
             if (data.count !== "0") {

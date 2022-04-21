@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+const host = process.env.HOST || "localhost";
 export default function Document() {
   return (
     <Html>
@@ -21,6 +22,14 @@ export default function Document() {
           rel="shortcut icon"
           href="/static/img/logo.png"
           type="image/x-icon"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.HOST = "${host}"
+          `,
+          }}
         />
       </Head>
       <body>

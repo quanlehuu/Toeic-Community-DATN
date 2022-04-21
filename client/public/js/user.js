@@ -2,7 +2,7 @@ $(document).ready(function () {
   const name = localStorage.getItem("username");
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/user/getInfo/" + name,
+    url: window.HOST + "/api/user/getInfo/" + name,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

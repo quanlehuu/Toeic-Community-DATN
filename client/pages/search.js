@@ -12,19 +12,19 @@ const Search = () => {
       <Head>
         <link rel="stylesheet" href="/css/newsfeed.css" />
       </Head>
-      <div id="body" style={{ visibility: "hidden" }}>
+      <div id="body">
         <Navigation />
         <div style={{ position: "relative" }}>
           <div id="content">
             <Posts />
-            <p class="no-post">Don't have any posts having this tag!</p>
+            <p className="no-post">Don't have any posts having this tag!</p>
           </div>
           <Top8 />
         </div>
       </div>
       <Foot />
-      <Script src="/static/js/showPost.js"></Script>
-      <Script src="/static/js/searchResult.js"></Script>
+      <Script src="/js/showPost.js"></Script>
+      <Script src="/js/searchResult.js"></Script>
     </>
   );
 };

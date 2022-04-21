@@ -6,7 +6,7 @@ $(document).ready(function () {
   );
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/user/getTop",
+    url: `${window.HOST}/api/user/getTop`,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".loader").show();
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/save",
+    url: window.HOST + "/api/save",
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

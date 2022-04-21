@@ -12,7 +12,7 @@ const Saved = () => {
       <Head>
         <link rel="stylesheet" href="/css/newsfeed.css" />
       </Head>
-      <div id="body" style={{ visibility: "hidden" }}>
+      <div id="body">
         <Navigation />
         <div
           style={{

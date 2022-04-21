@@ -1,7 +1,7 @@
 getPosts = (num) => {
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/post/getAll/" + num,
+    url: `${window.HOST}/api/post/getAll/` + num,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

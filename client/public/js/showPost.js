@@ -52,7 +52,7 @@ votePost = (id, voteClass1, voteClass2, isVoteUp) => {
           type: "PUT",
           data: JSON.stringify({ post: id, isVoteUp: isVoteUp }),
           contentType: "application/json",
-          url: "http://localhost:3000/api/votePost",
+          url: window.HOST + "/api/votePost",
           headers: {
             authorization: localStorage.getItem("access_token")
               ? "Bearer " + localStorage.getItem("access_token")
@@ -64,7 +64,7 @@ votePost = (id, voteClass1, voteClass2, isVoteUp) => {
           type: "POST",
           data: JSON.stringify({ post: id, isVoteUp: isVoteUp }),
           contentType: "application/json",
-          url: "http://localhost:3000/api/votePost",
+          url: window.HOST + "/api/votePost",
           headers: {
             authorization: localStorage.getItem("access_token")
               ? "Bearer " + localStorage.getItem("access_token")
@@ -78,7 +78,7 @@ votePost = (id, voteClass1, voteClass2, isVoteUp) => {
         type: "DELETE",
         data: JSON.stringify({ post: id, isVoteUp: isVoteUp }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/votePost",
+        url: window.HOST + "/api/votePost",
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -99,7 +99,7 @@ voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
           type: "PUT",
           data: JSON.stringify({ comment: id, isVoteUp: isVoteUp }),
           contentType: "application/json",
-          url: "http://localhost:3000/api/voteComment",
+          url: window.HOST + "/api/voteComment",
           headers: {
             authorization: localStorage.getItem("access_token")
               ? "Bearer " + localStorage.getItem("access_token")
@@ -111,7 +111,7 @@ voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
           type: "POST",
           data: JSON.stringify({ comment: id, isVoteUp: isVoteUp }),
           contentType: "application/json",
-          url: "http://localhost:3000/api/voteComment",
+          url: window.HOST + "/api/voteComment",
           headers: {
             authorization: localStorage.getItem("access_token")
               ? "Bearer " + localStorage.getItem("access_token")
@@ -125,7 +125,7 @@ voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
         type: "DELETE",
         data: JSON.stringify({ comment: id, isVoteUp: isVoteUp }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/voteComment",
+        url: window.HOST + "/api/voteComment",
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -185,7 +185,7 @@ showPost = (post) => {
     $.ajax({
       type: "DELETE",
       contentType: "application/json",
-      url: "http://localhost:3000/api/post/delete/" + id,
+      url: window.HOST + "/api/post/delete/" + id,
       headers: {
         authorization: localStorage.getItem("access_token")
           ? "Bearer " + localStorage.getItem("access_token")
@@ -218,7 +218,7 @@ showPost = (post) => {
         type: "POST",
         data: JSON.stringify({ ofPost: id, content: comment }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/comment",
+        url: window.HOST + "/api/comment",
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -238,7 +238,7 @@ showPost = (post) => {
   $.ajax({
     type: "GET",
     contentType: "application/json",
-    url: "http://localhost:3000/api/votePost/" + id,
+    url: window.HOST + "/api/votePost/" + id,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -257,7 +257,7 @@ showPost = (post) => {
   $.ajax({
     type: "GET",
     contentType: "application/json",
-    url: "http://localhost:3000/api/save/" + id,
+    url: window.HOST + "/api/save/" + id,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -280,7 +280,7 @@ showPost = (post) => {
         type: "POST",
         data: JSON.stringify({ post: id }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/save",
+        url: window.HOST + "/api/save",
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -293,7 +293,7 @@ showPost = (post) => {
         type: "DELETE",
         data: JSON.stringify({ post: id }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/save",
+        url: window.HOST + "/api/save",
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -308,7 +308,7 @@ showPost = (post) => {
     $.ajax({
       type: "GET",
       contentType: "application/json",
-      url: "http://localhost:3000/api/comment/get/" + id,
+      url: window.HOST + "/api/comment/get/" + id,
       headers: {
         authorization: localStorage.getItem("access_token")
           ? "Bearer " + localStorage.getItem("access_token")
@@ -343,7 +343,7 @@ showPost = (post) => {
               $.ajax({
                 type: "GET",
                 contentType: "application/json",
-                url: "http://localhost:3000/api/voteComment/" + commentId,
+                url: window.HOST + "/api/voteComment/" + commentId,
                 headers: {
                   authorization: localStorage.getItem("access_token")
                     ? "Bearer " + localStorage.getItem("access_token")
@@ -376,7 +376,7 @@ showPost = (post) => {
     $.ajax({
       type: "GET",
       contentType: "application/json",
-      url: "http://localhost:3000/api/comment/check/" + id,
+      url: window.HOST + "/api/comment/check/" + id,
       headers: {
         authorization: localStorage.getItem("access_token")
           ? "Bearer " + localStorage.getItem("access_token")

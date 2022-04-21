@@ -22,7 +22,7 @@ $(document).ready(function () {
   const id1 = localStorage.getItem("id");
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/user/getInfo/" + name,
+    url: window.HOST + "/api/user/getInfo/" + name,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -54,7 +54,7 @@ $(document).ready(function () {
         if (localStorage.getItem("username") !== username) {
           $.ajax({
             type: "GET",
-            url: `http://localhost:3000/api/follow/checkFollow/${id1}/${id2}`,
+            url: `${window.HOST}/api/follow/checkFollow/${id1}/${id2}`,
             headers: {
               authorization: localStorage.getItem("access_token")
                 ? "Bearer " + localStorage.getItem("access_token")
@@ -84,7 +84,7 @@ $(document).ready(function () {
         $(".loader").show();
         $.ajax({
           type: "GET",
-          url: "http://localhost:3000/api/post/getOfUser/" + user._id,
+          url: window.HOST + "/api/post/getOfUser/" + user._id,
           headers: {
             authorization: localStorage.getItem("access_token")
               ? "Bearer " + localStorage.getItem("access_token")
@@ -119,7 +119,7 @@ $(document).ready(function () {
     if (!following) {
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/api/follow/addFollow",
+        url: window.HOST + "/api/follow/addFollow",
         data: JSON.stringify(data),
         contentType: "application/json",
         headers: {
@@ -139,7 +139,7 @@ $(document).ready(function () {
 
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/api/notification",
+        url: window.HOST + "/api/notification",
         data: JSON.stringify({ followeeId: id2 }),
         contentType: "application/json",
         headers: {
@@ -151,7 +151,7 @@ $(document).ready(function () {
     } else {
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/api/follow/deleteFollow",
+        url: window.HOST + "/api/follow/deleteFollow",
         data: JSON.stringify(data),
         contentType: "application/json",
         headers: {

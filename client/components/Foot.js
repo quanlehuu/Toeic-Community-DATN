@@ -1,24 +1,7 @@
-import Script from "next/script";
-import React, { useEffect } from "react";
-// import { getPopularTag } from "../js/getPopularTag";
-// import { getTopUser } from "../js/getTopUser";
-// import { logout } from "../js/logout";
-// import { getNotification } from "../js/notification";
-// import { search } from "../js/search";
-// import { sidebar } from "../js/Sidebar";
-// import { user } from "../js/user";
+import React from "react";
+import Script from "./Script";
 
 const Foot = () => {
-  // useEffect(() => {
-  //   user();
-  //   getTopUser();
-  //   logout();
-  //   sidebar();
-  //   search();
-  //   getNotification();
-  //   getPopularTag();
-  // }, []);
-
   return (
     <>
       <Script src="/js/user.js"></Script>

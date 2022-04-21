@@ -22,7 +22,7 @@ getNoti = (num) => {
   $(".notification .loading").show();
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/notification/" + num,
+    url: `${window.HOST}/api/notification/` + num,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -69,7 +69,7 @@ getNoti = (num) => {
                 type: "PUT",
                 data: JSON.stringify({ seen: true }),
                 contentType: "application/json",
-                url: "http://localhost:3000/api/notification/" + id,
+                url: `${window.HOST}/api/notification/` + id,
                 headers: {
                   authorization: localStorage.getItem("access_token")
                     ? "Bearer " + localStorage.getItem("access_token")
@@ -87,7 +87,7 @@ getNoti = (num) => {
               type: "PUT",
               data: JSON.stringify({ seen: !noti.seen }),
               contentType: "application/json",
-              url: "http://localhost:3000/api/notification/" + id,
+              url: `${window.HOST}/api/notification/` + id,
               headers: {
                 authorization: localStorage.getItem("access_token")
                   ? "Bearer " + localStorage.getItem("access_token")
@@ -111,7 +111,7 @@ getNoti = (num) => {
 $(document).ready(() => {
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/notification",
+    url: `${window.HOST}/api/notification`,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -155,7 +155,7 @@ $(document).ready(() => {
       type: "PUT",
       data: JSON.stringify({ seen: true }),
       contentType: "application/json",
-      url: "http://localhost:3000/api/notification",
+      url: `${window.HOST}/api/notification`,
       headers: {
         authorization: localStorage.getItem("access_token")
           ? "Bearer " + localStorage.getItem("access_token")

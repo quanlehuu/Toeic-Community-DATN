@@ -28,7 +28,7 @@ function checkAndChange() {
         type: "POST",
         data: JSON.stringify(changePass),
         contentType: "application/json",
-        url: "http://localhost:3000/api/changePass", // chưa xong phần này tạo thêm file js để check
+        url: `${window.HOST}/api/changePass`, // chưa xong phần này tạo thêm file js để check
         success: function (data) {
           if (!data.success) {
             $("#loginalert p").text("Error: Current Password is incorrect.");

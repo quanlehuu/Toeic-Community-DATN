@@ -14,7 +14,7 @@ $(document).ready(function () {
     };
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/api/follow/deleteFollow",
+      url: `${window.HOST}/api/follow/deleteFollow`,
       data: JSON.stringify(data),
       contentType: "application/json",
       headers: {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/follow/" + localStorage.getItem("id"),
+    url: `${window.HOST}/api/follow/` + localStorage.getItem("id"),
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")
@@ -47,6 +47,14 @@ $(document).ready(function () {
       if (data.success) {
         $("#content").html("");
         const user = data.user;
+
+        if (user && !user.length) {
+          $("#content").append(`
+            <div class="not-found">
+                <p>You don't follow any one</p>
+            </div>
+          `);
+        }
         for (i = 0; i < user.length; i++) {
           $("#content").append(`
                     <div>

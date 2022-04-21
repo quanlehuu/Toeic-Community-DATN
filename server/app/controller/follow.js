@@ -11,8 +11,10 @@ controller.route("/:id").get(async (req, res) => {
       "followee",
       "img name point username"
     );
-    if (user !== null && user.length !== 0) res.json({ success: true, user });
-    else res.json({ success: false });
+    res.json({
+      user,
+      success: true,
+    });
   } catch (e) {
     res.json({ success: false });
   }

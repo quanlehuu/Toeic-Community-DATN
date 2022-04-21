@@ -24,7 +24,7 @@ function checkInput() {
       type: "POST",
       data: JSON.stringify(user),
       contentType: "application/json",
-      url: "http://localhost:3000/api/user/login",
+      url: `${window.HOST}/api/user/login`,
       success: function (data) {
         $(".backdrop").hide();
         if (!data) {

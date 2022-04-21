@@ -6,7 +6,7 @@ $(document).ready(function () {
   );
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/getPopularTag",
+    url: `${window.HOST}/api/getPopularTag`,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

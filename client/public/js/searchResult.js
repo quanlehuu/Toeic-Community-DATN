@@ -3,7 +3,7 @@ $(document).ready(function () {
   const keyword = searchParams.get("keyword");
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/search/" + keyword,
+    url: window.HOST + "/api/search/" + keyword,
     headers: {
       authorization: localStorage.getItem("access_token")
         ? "Bearer " + localStorage.getItem("access_token")

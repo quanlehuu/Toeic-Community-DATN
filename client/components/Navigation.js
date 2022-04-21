@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 const Navigation = () => {
@@ -14,10 +15,12 @@ const Navigation = () => {
           <div className="toggle-menu">
             <i className="fas fa-bars" />
           </div>
-          <a href="/" className="logo-name">
-            <div className="logo" />
-            <div className="name"> Toeic Community</div>
-          </a>
+          <Link href="/">
+            <a className="logo-name">
+              <div className="logo" />
+              <div className="name"> Toeic Community</div>
+            </a>
+          </Link>
         </div>
         <div className="search">
           <div className="search-box">
@@ -66,7 +69,11 @@ const Navigation = () => {
       <div id="vertical-menu">
         <a className="row">
           <div className="col-sm-3 avt" style={{ textAlign: "center" }}>
-            <img className="mypic" src="" alt="Avatar" />
+            <img
+              className="mypic"
+              src="/static/img/avatar_default.png"
+              alt="Avatar"
+            />
           </div>
           <div
             className="col-sm-9"
@@ -76,55 +83,69 @@ const Navigation = () => {
             <p id="point"></p>
           </div>
         </a>
-        <a href="/" id="sb-newsfeed">
-          <p>
-            <i className="fa fa-newspaper" />
-            News Feed
-          </p>
-        </a>
+        <Link href="/">
+          <a id="sb-newsfeed">
+            <p>
+              <i className="fa fa-newspaper" />
+              News Feed
+            </p>
+          </a>
+        </Link>
         <a id="sb-mypage">
           <p>
             <i className="fa fa-home" />
             My Page
           </p>
         </a>
-        <a href="/post" id="sb-post">
-          <p>
-            <i className="fa fa-edit" />
-            Post
-          </p>
-        </a>
-        <a href="/saved" id="sb-saved">
-          <p>
-            <i className="fa fa-bookmark" />
-            Saved
-          </p>
-        </a>
-        <a href="/following" id="sb-following">
-          <p>
-            <i className="fa fa-user" />
-            Following
-          </p>
-        </a>
-        <a href="/changepassword" id="sb-changepass">
-          <p>
-            <i className="fa fa-lock" />
-            Change Password
-          </p>
-        </a>
-        <a href="/video" id="sb-changepass">
-          <p>
-            <i className="fa fa-video" />
-            Video học tiếng anh
-          </p>
-        </a>
-        <a href="/exam" id="sb-changepass">
-          <p>
-            <i className="fa fa-book" />
-            Exam for you
-          </p>
-        </a>
-        <a id="sb-logout">
+        <Link href="/post">
+          <a id="sb-post">
+            <p>
+              <i className="fa fa-edit" />
+              Post
+            </p>
+          </a>
+        </Link>
+        <Link href="/saved">
+          <a id="sb-saved">
+            <p>
+              <i className="fa fa-bookmark" />
+              Saved
+            </p>
+          </a>
+        </Link>
+        <Link href="/following">
+          <a id="sb-following">
+            <p>
+              <i className="fa fa-user" />
+              Following
+            </p>
+          </a>
+        </Link>
+        <Link href="/changepassword">
+          <a id="sb-changepass">
+            <p>
+              <i className="fa fa-lock" />
+              Change Password
+            </p>
+          </a>
+        </Link>
+        <Link href="/video">
+          <a href="/video" id="sb-changepass">
+            <p>
+              <i className="fa fa-video" />
+              Video học tiếng anh
+            </p>
+          </a>
+        </Link>
+        <Link href="/exam">
+          <a href="/exam" id="sb-changepass">
+            <p>
+              <i className="fa fa-book" />
+              Exam for you
+            </p>
+          </a>
+        </Link>
+        <a style={{ cursor: "pointer" }} id="sb-logout">
           <p>
             <i className="fa fa-sign-out-alt" />
             LogOut

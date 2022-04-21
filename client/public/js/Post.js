@@ -267,7 +267,7 @@ $(document).ready(function () {
         type: "POST",
         data: JSON.stringify({ post: post }),
         contentType: "application/json",
-        url: "http://localhost:3000/api/post",
+        url: `${window.HOST}/api/post`,
         headers: {
           authorization: localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
