@@ -1,4 +1,4 @@
-getTime = (date) => {
+window.getTime = (date) => {
   const preDate = date.getDate() < 10 ? "0" : "";
   const preMonth = date.getMonth() + 1 < 10 ? "0" : "";
   return (
@@ -47,7 +47,7 @@ $(document).ready(function () {
         $("#fullname").text(name);
         $(".name-score .name").text(name);
         $(".score").text(point);
-        $("#birthday").text(birthday !== "" ? getTime(date) : "Hidden");
+        $("#birthday").text(birthday !== "" ? window.getTime(date) : "Hidden");
         $("#phonenumber").text(phonenumber !== "" ? phonenumber : "Hidden");
         $("#email").text(email !== "" ? email : "Hidden");
 

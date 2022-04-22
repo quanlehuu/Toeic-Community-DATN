@@ -1,4 +1,4 @@
-getTime = (date) => {
+const getTime = (date) => {
   const preDate = date.getDate() < 10 ? "0" : "";
   const preMonth = date.getMonth() + 1 < 10 ? "0" : "";
   const preMin = date.getMinutes() < 10 ? "0" : "";
@@ -18,7 +18,7 @@ getTime = (date) => {
   );
 };
 
-changeToGreen = (element) => {
+const changeToGreen = (element) => {
   $(element).css("color", "#66FF00");
   $(element).hover(
     () => {
@@ -30,7 +30,7 @@ changeToGreen = (element) => {
   );
 };
 
-changeToBlack = (element) => {
+const changeToBlack = (element) => {
   $(element).css("color", "black");
   $(element).hover(
     () => {
@@ -42,7 +42,7 @@ changeToBlack = (element) => {
   );
 };
 
-votePost = (id, voteClass1, voteClass2, isVoteUp) => {
+const votePost = (id, voteClass1, voteClass2, isVoteUp) => {
   $("#" + id + voteClass1).click(() => {
     if ($("#" + id + voteClass1).css("color") === "rgb(102, 255, 0)") {
       changeToGreen("#" + id + voteClass1);
@@ -89,7 +89,7 @@ votePost = (id, voteClass1, voteClass2, isVoteUp) => {
   });
 };
 
-voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
+const voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
   $("#" + id + voteClass1).click(() => {
     if ($("#" + id + voteClass1).css("color") === "rgb(102, 255, 0)") {
       changeToGreen("#" + id + voteClass1);
@@ -136,7 +136,7 @@ voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
   });
 };
 
-showPost = (post) => {
+const showPost = (post) => {
   let aPost = document.createElement("div");
   let id = post._id;
   aPost.id = id;

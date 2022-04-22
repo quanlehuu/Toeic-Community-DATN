@@ -1,4 +1,4 @@
-getPosts = (num) => {
+window.getPosts = (num) => {
   $.ajax({
     type: "GET",
     url: `${window.HOST}/api/post/getAll/` + num,
@@ -21,12 +21,12 @@ getPosts = (num) => {
 $(document).ready(function () {
   $("#sb-newsfeed").addClass("active");
   let num = 0;
-  getPosts(num);
+  window.getPosts(num);
 
   $(window).scroll(function () {
     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
       num = num + 1;
-      getPosts(num);
+      window.getPosts(num);
     }
   });
 });

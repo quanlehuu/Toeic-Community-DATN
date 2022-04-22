@@ -1,4 +1,4 @@
-getDateTime = (date) => {
+window.getDateTime = (date) => {
   const preDate = date.getDate() < 10 ? "0" : "";
   const preMonth = date.getMonth() + 1 < 10 ? "0" : "";
   const preMin = date.getMinutes() < 10 ? "0" : "";
@@ -50,7 +50,7 @@ getNoti = (num) => {
               noti.follower.username + " posted"
             );
             $("#" + id + " .notification-detail i").text(
-              getDateTime(new Date(noti.time))
+              window.getDateTime(new Date(noti.time))
             );
           } else {
             $("#" + id + " a").attr("href", "/user/" + noti.follower.username);
@@ -59,7 +59,7 @@ getNoti = (num) => {
               noti.follower.username + " followed you"
             );
             $("#" + id + " .notification-detail i").text(
-              getDateTime(new Date(noti.time))
+              window.getDateTime(new Date(noti.time))
             );
           }
 

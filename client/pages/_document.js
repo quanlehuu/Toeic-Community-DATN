@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-const host = process.env.HOST || "localhost";
+const host = process.env.HOST || "http://localhost:3000";
 export default function Document() {
   return (
     <Html>
