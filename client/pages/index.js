@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <Foot />
       <Script src="/js/showPost.js"></Script>
-      <Script src="/js/newsfeed.js"></Script>
+      <Script src="/js/NewsFeed.js"></Script>
     </>
   );
 }
