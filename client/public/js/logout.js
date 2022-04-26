@@ -1,6 +1,7 @@
-$(document).ready(function() {
-    $('#sb-logout').click(()=>{
-        localStorage.setItem('access_token', null);
-        window.location.href = '/login';
-    })
+$(document).ready(function () {
+  $("#sb-logout").click(() => {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("username");
+    window.location.href = "/";
+  });
 });

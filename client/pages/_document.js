@@ -24,6 +24,8 @@ export default function Document() {
           type="image/x-icon"
         />
 
+        <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `

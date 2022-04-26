@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Toeic Community</title>
-        <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
       </Head>
       <div id="app" className="app">
         <Component {...pageProps} />
