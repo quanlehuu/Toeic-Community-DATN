@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="stylesheet" href="/css/newsfeed.css" />
       </Head>
       <div>
-        <div id="body">
+        <div id="body" style={{ visibility: "hidden" }}>
           <Navigation />
           <div style={{ position: "relative" }}>
             <div id="content">

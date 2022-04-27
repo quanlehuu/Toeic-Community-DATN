@@ -16,7 +16,7 @@ $(document).ready(function () {
           $(".no-post").show();
         } else {
           for (let i = 0; i < data.post.length; i++)
-            showPost(data.post[i].post);
+            window.showPost(data.post[i].post);
         }
       }
     },

@@ -1,24 +1,4 @@
-const getTime = (date) => {
-  const preDate = date.getDate() < 10 ? "0" : "";
-  const preMonth = date.getMonth() + 1 < 10 ? "0" : "";
-  const preMin = date.getMinutes() < 10 ? "0" : "";
-  return (
-    date.getHours() +
-    ":" +
-    preMin +
-    date.getMinutes() +
-    " " +
-    preDate +
-    date.getDate() +
-    "/" +
-    preMonth +
-    (date.getMonth() + 1) +
-    "/" +
-    date.getFullYear()
-  );
-};
-
-const changeToGreen = (element) => {
+window.changeToGreen = (element) => {
   $(element).css("color", "#66FF00");
   $(element).hover(
     () => {
@@ -30,7 +10,7 @@ const changeToGreen = (element) => {
   );
 };
 
-const changeToBlack = (element) => {
+window.changeToBlack = (element) => {
   $(element).css("color", "black");
   $(element).hover(
     () => {
@@ -42,12 +22,12 @@ const changeToBlack = (element) => {
   );
 };
 
-const votePost = (id, voteClass1, voteClass2, isVoteUp) => {
+window.votePost = (id, voteClass1, voteClass2, isVoteUp) => {
   $("#" + id + voteClass1).click(() => {
     if ($("#" + id + voteClass1).css("color") === "rgb(102, 255, 0)") {
-      changeToGreen("#" + id + voteClass1);
+      window.changeToGreen("#" + id + voteClass1);
       if ($("#" + id + voteClass2).css("color") === "rgb(102, 255, 0)") {
-        changeToBlack("#" + id + voteClass2);
+        window.changeToBlack("#" + id + voteClass2);
         $.ajax({
           type: "PUT",
           data: JSON.stringify({ post: id, isVoteUp: isVoteUp }),
@@ -73,7 +53,7 @@ const votePost = (id, voteClass1, voteClass2, isVoteUp) => {
         });
       }
     } else {
-      changeToBlack("#" + id + voteClass1);
+      window.changeToBlack("#" + id + voteClass1);
       $.ajax({
         type: "DELETE",
         data: JSON.stringify({ post: id, isVoteUp: isVoteUp }),
@@ -89,12 +69,12 @@ const votePost = (id, voteClass1, voteClass2, isVoteUp) => {
   });
 };
 
-const voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
+window.voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
   $("#" + id + voteClass1).click(() => {
     if ($("#" + id + voteClass1).css("color") === "rgb(102, 255, 0)") {
-      changeToGreen("#" + id + voteClass1);
+      window.changeToGreen("#" + id + voteClass1);
       if ($("#" + id + voteClass2).css("color") === "rgb(102, 255, 0)") {
-        changeToBlack("#" + id + voteClass2);
+        window.changeToBlack("#" + id + voteClass2);
         $.ajax({
           type: "PUT",
           data: JSON.stringify({ comment: id, isVoteUp: isVoteUp }),
@@ -120,7 +100,7 @@ const voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
         });
       }
     } else {
-      changeToBlack("#" + id + voteClass1);
+      window.changeToBlack("#" + id + voteClass1);
       $.ajax({
         type: "DELETE",
         data: JSON.stringify({ comment: id, isVoteUp: isVoteUp }),
@@ -136,7 +116,27 @@ const voteComment = (id, voteClass1, voteClass2, isVoteUp) => {
   });
 };
 
-const showPost = (post) => {
+window.showPost = (post) => {
+  const getTimePost = (date) => {
+    const preDate = date.getDate() < 10 ? "0" : "";
+    const preMonth = date.getMonth() + 1 < 10 ? "0" : "";
+    const preMin = date.getMinutes() < 10 ? "0" : "";
+    return (
+      date.getHours() +
+      ":" +
+      preMin +
+      date.getMinutes() +
+      " " +
+      preDate +
+      date.getDate() +
+      "/" +
+      preMonth +
+      (date.getMonth() + 1) +
+      "/" +
+      date.getFullYear()
+    );
+  };
+
   let aPost = document.createElement("div");
   let id = post._id;
   aPost.id = id;
@@ -148,7 +148,7 @@ const showPost = (post) => {
   $("#" + id + " .avt").attr("src", post.ofUser.img);
   $("#" + id + " .user-post a").attr("href", "/user/" + post.ofUser.username);
   $("#" + id + " .user-post a").text(post.ofUser.name);
-  $("#" + id + " .user-post i").text(getTime(new Date(post.time)));
+  $("#" + id + " .user-post i").text(getTimePost(new Date(post.time)));
   $("#" + id + " .question").text(post.question);
   $("#" + id + " .optionA").text("A. " + post.optionA);
   $("#" + id + " .optionB").text("B. " + post.optionB);
@@ -211,7 +211,7 @@ const showPost = (post) => {
       // $("#" + id + " .comment>b>a").text(localStorage.getItem('name'));
       // $("#" + id + " .comment a").attr("href","/user="+ localStorage.getItem('username'));
       $("#" + id + " .comment span").text(comment);
-      $("#" + id + " .comment i").text(getTime(new Date()));
+      $("#" + id + " .comment i").text(getTimePost(new Date()));
       $("#" + id + " .comment").show();
 
       $.ajax({
@@ -246,9 +246,9 @@ const showPost = (post) => {
     },
     success: (data) => {
       if (data.voted === 1) {
-        changeToGreen("#" + id + " .vote-up");
+        window.changeToGreen("#" + id + " .vote-up");
       } else if (data.voted === -1) {
-        changeToGreen("#" + id + " .vote-down");
+        window.changeToGreen("#" + id + " .vote-down");
       }
     },
   });
@@ -265,17 +265,17 @@ const showPost = (post) => {
     },
     success: (data) => {
       if (data.saved) {
-        changeToGreen("#" + id + " .save");
+        window.changeToGreen("#" + id + " .save");
       }
     },
   });
 
-  votePost(id, " .vote-up", " .vote-down", true);
-  votePost(id, " .vote-down", " .vote-up", false);
+  window.votePost(id, " .vote-up", " .vote-down", true);
+  window.votePost(id, " .vote-down", " .vote-up", false);
 
   $("#" + id + " .save").click(() => {
     if ($("#" + id + " .save").css("color") === "rgb(102, 255, 0)") {
-      changeToGreen("#" + id + " .save");
+      window.changeToGreen("#" + id + " .save");
       $.ajax({
         type: "POST",
         data: JSON.stringify({ post: id }),
@@ -288,7 +288,7 @@ const showPost = (post) => {
         },
       });
     } else {
-      changeToBlack("#" + id + " .save");
+      window.changeToBlack("#" + id + " .save");
       $.ajax({
         type: "DELETE",
         data: JSON.stringify({ post: id }),
@@ -337,7 +337,7 @@ const showPost = (post) => {
                 "/user/" + comment[i].ofUser.username
               );
               $("#" + commentId + " .user-cmt i").text(
-                getTime(new Date(comment[i].time))
+                getTimePost(new Date(comment[i].time))
               );
               $("#" + commentId + " span").text(comment[i].content);
               $.ajax({
@@ -351,14 +351,24 @@ const showPost = (post) => {
                 },
                 success: (data) => {
                   if (data.voted === 1) {
-                    changeToGreen("#" + commentId + " .vote-cmt-up");
+                    window.changeToGreen("#" + commentId + " .vote-cmt-up");
                   } else if (data.voted === -1) {
-                    changeToGreen("#" + commentId + " .vote-cmt-down");
+                    window.changeToGreen("#" + commentId + " .vote-cmt-down");
                   }
                 },
               });
-              voteComment(commentId, " .vote-cmt-up", " .vote-cmt-down", true);
-              voteComment(commentId, " .vote-cmt-down", " .vote-cmt-up", false);
+              window.voteComment(
+                commentId,
+                " .vote-cmt-up",
+                " .vote-cmt-down",
+                true
+              );
+              window.voteComment(
+                commentId,
+                " .vote-cmt-down",
+                " .vote-cmt-up",
+                false
+              );
             }
           }
         }

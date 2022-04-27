@@ -4,7 +4,6 @@ const Script = ({ src }) => {
   useEffect(() => {
     const s = document.createElement("script");
     s.setAttribute("src", src);
-    s.setAttribute("defer", "defer");
 
     const timeout = setTimeout(() => {
       document.querySelector("body").appendChild(s);

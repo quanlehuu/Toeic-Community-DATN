@@ -45,7 +45,7 @@ const Post = () => {
                       name="group100"
                       type="radio"
                       id="radio100"
-                      defaultChecked=""
+                      defaultChecked
                     />
                     <label className="form-check-label" htmlFor="radio100">
                       share knowledge
@@ -223,7 +223,7 @@ const Post = () => {
         </div>
       </div>
       <Foot />
-      <Script src="/js/post.js"></Script>
+      <Script src="/js/Post.js"></Script>
       <Script src="/js/Tagsinput.js"></Script>
     </>
   );

@@ -10,7 +10,7 @@ window.getPosts = (num) => {
     success: (data) => {
       if (data.post && data.post.length !== 0) {
         let i;
-        for (i = 0; i < data.post.length; i++) showPost(data.post[i]);
+        for (i = 0; i < data.post.length; i++) window.showPost(data.post[i]);
       } else {
         $(".loader").hide();
       }

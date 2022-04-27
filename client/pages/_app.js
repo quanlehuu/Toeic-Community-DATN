@@ -20,6 +20,13 @@ function MyApp({ Component, pageProps }) {
     });
     firstMount.current = false;
   }
+
+  useEffect(() => {
+    document.body.style.visibility = "hidden";
+    setTimeout(() => {
+      document.body.style.visibility = "visible";
+    }, 50);
+  });
   return (
     <>
       <Head>
