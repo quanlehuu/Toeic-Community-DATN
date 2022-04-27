@@ -449,7 +449,7 @@ $(document).ready(function () {
           type: "POST",
           data: JSON.stringify(user),
           contentType: "application/json",
-          url: "/api/user/add",
+          url: window.HOST + "/api/user/add",
           success: (data) => {
             $(".backdrop").show();
             if (data.success) {
